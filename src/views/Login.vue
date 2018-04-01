@@ -50,8 +50,6 @@ export default {
   		}
       //设置在登录状态
       this.isLoging = true;
-             
-                this.$router.push({ path: '/table' });
       axios.get('/api/login', {
         params: param
       }).then((result) => {
