@@ -25,7 +25,6 @@ npm run build
     * assets
     * common
     * components - your vue components
-    * mock
     * styles
     * views - your pages
     * vuex
@@ -33,6 +32,8 @@ npm run build
     * main.js - main file
     * routes.js
 * static - static assets
+
+server api use axios by  [https://github.com/GaoHawk/blog-server](https://github.com/GaoHawk/blog-server)
 
 
 
