@@ -47,25 +47,33 @@ export default {
   		let param = {
   			account: this.account,
   			password: password
-  		}
-      //设置在登录状态
+          }
+            //设置在登录状态
+      let vm = this;
       this.isLoging = true;
-      axios.get('/api/login', {
-        params: param
-      }).then((result) => {
-        let res = result.data
-        if (res.status == "0") {
-          let expireDays = 1000 * 60 * 60 * 24 * 15;
-          // this.setCookie('user', res.result, expireDays);
-          this.isLoging = false;
-          let user = res.result;
-          sessionStorage.setItem('user', JSON.stringify(user));
-          this.$router.push({ path: '/articleList' });
-        //   this.$router.push('/');
-        } else {
-          this.$router.push('/login');
-        }
-      })
+    　setTimeout(() =>{
+        sessionStorage.setItem('user', JSON.stringify(param));
+        vm.isLoging = false;
+        vm.$router.push({ path: '/articleList' });
+      },1000)
+
+
+    //   axios.get('/api/login', {
+    //     params: param
+    //   }).then((result) => {
+    //     let res = result.data
+    //     if (res.status == "0") {
+    //       let expireDays = 1000 * 60 * 60 * 24 * 15;
+    //       // this.setCookie('user', res.result, expireDays);
+    //       this.isLoging = false;
+    //       let user = res.result;
+    //       sessionStorage.setItem('user', JSON.stringify(user));
+    //       this.$router.push({ path: '/articleList' });
+    //     //   this.$router.push('/');
+    //     } else {
+    //       this.$router.push('/login');
+    //     }
+    //   })
   	}
   }
 }
