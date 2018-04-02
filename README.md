@@ -1,4 +1,5 @@
-**demo**: [https://taylorchen709.github.io/vue-admin/](https://taylorchen709.github.io/vue-admin/)
+**demo**: 
+This is a project template for [admin-master](http://www.gg-gaohawk.top:3000/admin/)
 
 # To start
 
